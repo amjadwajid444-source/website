@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echoes of Rock - Details</title>
+    <!-- Bootstrap & FontAwesome CSS CDNs -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .album-detail {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .album-detail img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .tracklist ul {
+            padding-left: 20px;
+        }
+
+        .tracklist li {
+            margin: 8px 0;
+        }
+
+        .btn-blue {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn-blue:hover {
+            background: #0056b3;
+            color: white;
+        }
+
+        .price-tag {
+            font-size: 1.5rem;
+            color: #007bff;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="album-detail">
+    <!-- Album-->
+    <img src="jslz,n.jpg" alt="Echoes of Rock Album">
+
+    <h1 class="mt-3">Echoes of Rock</h1>
+
+    <p><strong>Artist:</strong> Strings</p>
+    <p><strong>Genre:</strong> Rock / Pop-Rock</p>
+    <p><strong>Release Year:</strong> 2024</p>
+    
+    <!-- Album-->
+    <div class="price-tag">Rs 1200</div>
+
+    <h2>Album Description</h2>
+    <p>
+        "High-energy tracks and nostalgic stadium rock anthems from the icons."
+    </p>
+
+    <div class="tracklist">
+        <h2>Track List</h2>
+        <ul>
+            <li>Sar Kiye Yeh Pahar</li>
+            <li>Duur</li>
+            <li>Zinda</li>
+            <li>Dhaani</li>
+            <li>Sajni</li>
+        </ul>
+    </div>
+
+    <!-- واپس جانے کا بٹن -->
+    <a href="albums.html" class="btn-blue">Back to Albums</a>
+</div>
+<!-- Buy Action Button -->
+<div class="mt-4 text-center">
+    <button onclick="toggleRockForm()" class="btn btn-success w-100" style="background-color: #28a745; font-size: 1.2rem; border: none; padding: 12px;">
+        <i class="fas fa-shopping-cart"></i> Order via WhatsApp - Rs 1200
+    </button>
+</div>
+
+<!-- Shipping Delivery Form Container (Hidden initially) -->
+<div id="rockFormContainer" style="display: none; margin-top: 25px; background: #f9f9f9; padding: 25px; border-radius: 10px; border: 1px solid #ddd;">
+    <h3 style="color: #28a745; margin-bottom: 15px;"><i class="fas fa-truck"></i> Shipping Details</h3>
+    <form id="rockOrderForm">
+        <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" id="buyerName" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" id="buyerPhone" class="form-control" placeholder="e.g., 03001234567" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Delivery Address</label>
+            <textarea id="buyerAddress" class="form-control" rows="2" placeholder="Enter your full shipping address" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success w-100" style="background-color: #28a745;">Confirm Rock Order</button>
+    </form>
+</div>
+
+<!-- Rock Fan Reviews Panel -->
+<div style="margin-top: 40px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+    <h2>Fan Feedback</h2>
+    <div style="background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 8px;">
+        <h4>Bilal Ahmed ⭐⭐⭐⭐⭐</h4>
+        <p>Nostalgic tracks! Strings' melodies take me back to college days. Exceptional quality!</p>
+    </div>
+    <div style="background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 8px;">
+        <h4>Zainab Malik ⭐⭐⭐⭐⭐</h4>
+        <p>Sar Kiye Yeh Pahar is timeless. Best rock album in Pakistan!</p>
+    </div>
+</div>
+<script>
+
+// Process data inputs and dispatch forward to WhatsApp API
+document.getElementById('rockOrderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    var name = document.getElementById('buyerName').value;
+    var phone = document.getElementById('buyerPhone').value;
+    var address = document.getElementById('buyerAddress').value;
+    
+    // Replace with your active business phone numbers config
+    var myWhatsAppNumber = "923001234567"; 
+
+    var message = "*New Album Order Received!* \n\n" +
+                  "*Album Name:* Echoes of Rock (Strings)\n" +
+                  "*Customer Name:* " + name + "\n" +
+                  "*Contact Number:* " + phone + "\n" +
+                  "*Shipping Address:* " + address + "\n" +
+                  "*Total Bill Amount:* Rs 1200";
+                  
+    var whatsappUrl = "https://wa.me" + myWhatsAppNumber + "?text=" + encodeURIComponent(message);
+    window.open(whatsappUrl, '_blank');
+    
+    this.reset();
+    toggleRockForm();
+});
+</script>
+
+      
+<script>
+function playRockAudio(trackId, btnElement) {
+    const activeTrack = document.getElementById(trackId);
+    
+    // 1. Pause and reset any other running audio streams on the page
+    document.querySelectorAll('.tracklist audio').forEach(audioStream => {
+        if (audioStream !== activeTrack) {
+            audioStream.pause();
+            audioStream.currentTime = 0;
+            
+            // Revert companion button states back to play icons
+            const siblingBtn = audioStream.nextElementSibling;
+            if (siblingBtn) {
+                siblingBtn.innerHTML = '<i class="fas fa-play"></i> Preview';
+                siblingBtn.className = "btn btn-sm btn-outline-primary";
+            }
+        }
+    });
+
+    // 2. Toggle playback states for target media file
+    if (activeTrack.paused) {
+        activeTrack.play();
+        btnElement.innerHTML = '<i class="fas fa-pause"></i> Pause';
+        btnElement.className = "btn btn-sm btn-danger"; // Red pause design state
+    } else {
+        activeTrack.pause();
+        btnElement.innerHTML = '<i class="fas fa-play"></i> Preview';
+        btnElement.className = "btn btn-sm btn-outline-primary";
+    }
+
+    // 3. Reset visual labels automatically when track finishes streaming
+    activeTrack.onended = function() {
+        btnElement.innerHTML = '<i class="fas fa-play"></i> Preview';
+        btnElement.className = "btn btn-sm btn-outline-primary";
+    };
+}
+</script>
+    </div>
+    
+<!-- Update Album Column 1 Wrapper -->
+<div class="col-md-4 album-card-item" data-genre="Pop">
+    <!-- (Keep everything else inside the card the same) -->
+</div>
+
+<!-- Update Album Column 2 Wrapper -->
+<div class="col-md-4 album-card-item" data-genre="Rock">
+    <!-- (Keep everything else inside the card the same) -->
+</div>
+
+<!-- Update Album Column 3 Wrapper -->
+<div class="col-md-4 album-card-item" data-genre="Sufi">
+    <!-- (Keep everything else inside the card the same) -->
+</div>
+<script>
+let currentSelectedGenre = 'all';
+
+// Function to handle Text Search Input filtering
+function filterMusicCatalog() {
+    const searchWord = document.getElementById('albumSearchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.album-card-item');
+
+    cards.forEach(card => {
+        const albumName = card.querySelector('h3').innerText.toLowerCase();
+        const artistName = card.querySelector('.text-muted').innerText.toLowerCase();
+        const matchesSearch = albumName.includes(searchWord) || artistName.includes(searchWord);
+        
+        // Match both active genre tab and text filter criteria
+        const cardGenre = card.getAttribute('data-genre');
+        const matchesGenre = (currentSelectedGenre === 'all' || cardGenre === currentSelectedGenre);
+
+        if (matchesSearch && matchesGenre) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+// Function to handle Genre Button selections
+function filterGenre(genre, buttonElement) {
+    currentSelectedGenre = genre;
+    
+    // Manage active bootstrap presentation styles on buttons
+    document.querySelectorAll('.genre-buttons-group button').forEach(btn => {
+        btn.classList.remove('btn-primary', 'active-genre');
+        btn.classList.add('btn-outline-secondary');
+    });
+    buttonElement.classList.remove('btn-outline-secondary');
+    buttonElement.classList.add('btn-primary', 'active-genre');
+
+    // Trigger filter calculation cascade
+    filterMusicCatalog();
+}
+</script>
+<!-- Live Inventory Status Badges -->
+
+<!-- For Album 1 (Low Stock Example) -->
+<div class="mb-2">
+    <span class="badge bg-warning text-dark" id="stockAlbum1"><i class="fas fa-exclamation-triangle"></i> Only 3 Left in Stock</span>
+</div>
+
+<!-- For Album 2 (Available Example) -->
+<div class="mb-2">
+    <span class="badge bg-success" id="stockAlbum2"><i class="fas fa-check-circle"></i> In Stock (Available)</span>
+</div>
+
+<!-- For Album 3 (Out of Stock Example) -->
+<div class="mb-2">
+    <span class="badge bg-danger" id="stockAlbum3"><i class="fas fa-times-circle"></i> Sold Out (Restocking Soon)</span>
+</div>
+<!-- Disabled Button State for Sold Out Products -->
+<a href="#" class="btn-view disabled" style="background-color: #6c757d; pointer-events: none; opacity: 0.6;">Sold Out</a>
+
+</body>
+</html>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Check if we already have stock values stored in browser history
+    let currentStockValue = localStorage.getItem('album1Stock') ? parseInt(localStorage.getItem('album1Stock')) : 3;
+    
+    const stockBadge = document.getElementById('stockAlbum1');
+    
+    if (stockBadge) {
+        if (currentStockValue > 0) {
+            stockBadge.innerHTML = `<i class="fas fa-exclamation-triangle"></i> Only ${currentStockValue} Left in Stock`;
+        } else {
+            stockBadge.className = "badge bg-danger";
+            stockBadge.innerHTML = `<i class="fas fa-times-circle"></i> Sold Out`;
+            
+            // Look for the action button next to it and disable it automatically
+            const actionBtn = stockBadge.closest('.album-body').querySelector('.btn-view');
+            if (actionBtn) {
+                actionBtn.innerText = "Sold Out";
+                actionBtn.style.backgroundColor = "#6c757d";
+                actionBtn.style.pointerEvents = "none";
+                actionBtn.style.opacity = "0.6";
+            }
+        }
+    }
+
+    // Optional: Simulate someone else buying an album after 10 seconds of viewing
+    setTimeout(() => {
+        if (currentStockValue > 1) {
+            currentStockValue--;
+            localStorage.setItem('album1Stock', currentStockValue);
+            if (stockBadge) stockBadge.innerHTML = `<i class="fas fa-exclamation-triangle"></i> Only ${currentStockValue} Left in Stock`;
+        }
+    }, 10000);
+});
+</script>
+
+<style>
+.album-card .image-wrapper {
+    width: 100%;
+    height: 250px;
+    overflow: hidden; /* This crops the image inside the border radius while zooming */
+    position: relative;
+}
+
+/* Base Image State */
+.album-card .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Controls the speed and smoothness of the zoom */
+}
+
+/* Hover Zoom Effect Trigger */
+.album-card:hover .image-wrapper img {
+    transform: scale(1.1); /* Scales the image up by 10% */
+}
+</style>
+<!-- Wrap each of your card images like this example -->
+<div class="album-card">
+    <!-- New wrapper container goes here -->
+    <div class="image-wrapper">
+        <img src="Ai..jpeg" alt="Memories Album">
+    </div>
+    <div class="album-body">
+        <h3>Memories</h3>
+        <!-- (The rest of your card details remain the same) -->
+    </div>
+</div>
+
+<style>
+.toast {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.toast.show-now {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+</style>
+<script>
+function showNotification(textString, typeStyle = "success") {
+    const toastElement = document.getElementById('appToast');
+    const msgElement = document.getElementById('toastMessage');
+
+    if (!toastElement || !msgElement) return;
+
+    // 1. Set text content
+    msgElement.innerHTML = textString;
+
+    // 2. Manage Bootstrap contextual backgrounds (success, danger, info)
+    toastElement.className = `toast align-items-center text-white border-0 show-now`;
+    if (typeStyle === "success") {
+        toastElement.style.backgroundColor = "#28a745";
+    } else if (typeStyle === "danger") {
+        toastElement.style.backgroundColor = "#dc3545";
+    } else if (typeStyle === "info") {
+        toastElement.style.backgroundColor = "#17a2b8";
+    }
+
+    // 3. Automatically dim and hide the notification after 4 seconds
+    setTimeout(() => {
+        hideToast();
+    }, 4000);
+}
+
+function hideToast() {
+    const toastElement = document.getElementById('appToast');
+    if (toastElement) {
+        toastElement.classList.remove('show-now');
+    }
+}
+</script>
+<!-- Flash Sale Ticker Header Banner -->
+<div id="saleCountdownBanner" style="background: linear-gradient(90deg, #dc3545, #9b1c26); color: #ffffff; text-align: center; padding: 10px 15px; font-family: Arial, sans-serif; font-weight: bold; font-size: 0.95rem; letter-spacing: 0.5px; box-shadow: 0 2px 10px rgba(0,0,0,0.15); z-index: 1050; position: relative;">
+    <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-center">
+        <span class="mb-1 mb-sm-0 me-sm-3">
+            <i class="fas fa-bolt text-warning animate-flash"></i> FLASH SALE OFFER! Use Coupon <span style="background: rgba(255,255,255,0.2); padding: 2px 6px; border-radius: 3px;">SUFI20</span> for 20% Off!
+        </span>
+        <span style="background: #ffffff; color: #dc3545; padding: 3px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 900; box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);">
+            Ends In: <span id="tickerTimer">00h 00m 00s</span>
+        </span>
+    </div>
+</div>
+
+<style>
+@keyframes flashPulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+.animate-flash {
+    animation: flashPulse 1.2s infinite;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Establish or read a target end time set in browser storage (e.g., a rolling 4-hour countdown)
+    let targetTime = localStorage.getItem('saleTargetTime');
+    
+    if (!targetTime) {
+        targetTime = new Date().getTime() + (4 * 60 * 60 * 1000); // 4 hours from right now
+        localStorage.setItem('saleTargetTime', targetTime);
+    } else {
+        targetTime = parseInt(targetTime);
+    }
+
+    // 2. Start the clock processing loop
+    const tickerInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const difference = targetTime - now;
+
+        // 3. Time calculation metrics
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        // Format leading zeros nicely (e.g., 05 instead of 5)
+        const formatH = hours < 10 ? "0" + hours : hours;
+        const formatM = minutes < 10 ? "0" + minutes : minutes;
+        const formatS = seconds < 10 ? "0" + seconds : seconds;
+
+        // 4. Update the layout text elements
+        const timerElement = document.getElementById("tickerTimer");
+        if (timerElement) {
+            timerElement.innerText = `${formatH}h ${formatM}m ${formatS}s`;
+        }
+
+        // 5. When the countdown completes, reset or shut down the banner visual
+        if (difference < 0) {
+            clearInterval(tickerInterval);
+            const banner = document.getElementById("saleCountdownBanner");
+            if (banner) banner.style.display = "none"; // Hide promo when expired
+            localStorage.removeItem('saleTargetTime');
+        }
+    }, 1000);
+});
+</script>
+<!-- Floating Customer Support Widget -->
+<div class="support-chat-wrapper">
+    <!-- Hidden Chat Box Window -->
+    <div id="supportChatBox" class="chat-window-box" style="display: none;">
+        <div class="chat-header">
+            <h5><i class="fab fa-whatsapp me-1"></i> MelodyStore Support</h5>
+            <button onclick="toggleSupportChat()" class="btn-close btn-close-white"></button>
+        </div>
+        <div class="chat-body p-3">
+            <p class="small text-muted mb-3">Hi there! 👋 Have a question about our music albums or digital downloads? Ask us right here!</p>
+            <div class="mb-2">
+                <textarea id="supportQueryText" class="form-control form-control-sm" rows="3" placeholder="Type your question here..." required></textarea>
+            </div>
+            <button onclick="sendSupportMessage()" class="btn btn-sm btn-success w-100" style="background-color: #25D366; border-color: #25D366;">
+                <i class="fas fa-paper-plane me-1"></i> Send to WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Floating Circular Toggle Button -->
+    <button onclick="toggleSupportChat()" id="chatBubbleTrigger" title="Contact Customer Support">
+        <i class="fas fa-comments"></i>
+    </button>
+</div>
+<style>
+.support-chat-wrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    z-index: 1060;
+    font-family: Arial, sans-serif;
+}
+
+#chatBubbleTrigger {
+    background-color: #25D366; /* WhatsApp official green hex color */
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#chatBubbleTrigger:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.chat-window-box {
+    width: 280px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    animation: slideUpFade 0.3s ease;
+}
+
+.chat-header {
+    background-color: #128C7E;
+    color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h5 { margin: 0; font-size: 0.95rem; font-weight: bold; }
+
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode adaptation */
+body.dark-theme .chat-window-box {
+    background-color: #1e1e1e !important;
+    border-color: #333;
+}
+</style>
+<script>
+// Toggle the support box view interface state
+function toggleSupportChat() {
+    const chatBox = document.getElementById("supportChatBox");
+    if (chatBox) {
+        chatBox.style.display = (chatBox.style.display === "none") ? "block" : "none";
+    }
+}
+
+// Format the user query text area input and redirect to support phone
+function sendSupportMessage() {
+    const userQuery = document.getElementById("supportQueryText").value.trim();
+    
+    if (userQuery === "") {
+        alert("Please type a question before sending.");
+        return;
+    }
+
+    // Replace this string placeholder with your actual active business phone details
+    const supportPhoneDigits = "923001234567";
+
+    const formattedText = "*MelodyStore Customer Inquiry:* \n\n" + userQuery;
+    const directUrlLink = "https://wa.me" + supportPhoneDigits + "?text=" + encodeURIComponent(formattedText);
+
+    // Open WhatsApp windows session
+    window.open(directUrlLink, '_blank');
+
+    // Clean field inputs and collapse the widget box area
+    document.getElementById("supportQueryText").value = "";
+    toggleSupportChat();
+}
+</script>
+<!-- Print Invoice Action Trigger -->
+<div class="mt-3 text-end d-print-none">
+    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="triggerInvoicePrint()">
+        <i class="fas fa-print me-1"></i> Print / Save Receipt PDF
+    </button>
+</div>
+<style>
+@media print {
+    /* 1. Hide all noisy interactive web components completely */
+    nav, footer, .share-toolbar, #backToTopBtn, .support-chat-wrapper, 
+    #saleCountdownBanner, .video-container, .add-review-form, 
+    .btn, button, #albumCarousel, .carousel-indicators, .carousel-control-prev, .carousel-control-next {
+        display: none !important;
+    }
+
+    /* 2. Flatten backgrounds and optimize contrast for ink efficiency */
+    body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 12pt;
+    }
+
+    /* 3. Make sure the container expands full-width and ignores dark themes */
+    .album-detail, .order-container, #orderFormContainer {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        display: block !important; /* Force order form detail visible if opened */
+    }
+    
+    /* 4. Ensure tables display clean structural grid borders on paper */
+    .table {
+        border-collapse: collapse !important;
+    }
+    .table td, .table th {
+        background-color: #fff !important;
+        border: 1px solid #ddd !important;
+        padding: 8px !important;
+    }
+}
+</style>
+<script>
+// Function to launch native print prompt engine
+function triggerInvoicePrint() {
+    // Force recalculation to ensure current coupon and shipping metrics update on layout
+    if (typeof calculateReceiptValues === "function") {
+        calculateReceiptValues();
+    }
+    
+    // Execute browser print window sequence
+    window.print();
+}
+</script>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>

@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Shows</title>
+</head>
+<body style="background-color: gray;">
+    
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#3b82f6;;
+}
+
+header{
+    background:#1a73e8;;
+    padding:16px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin:0 10px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+.search-box input{
+    padding:6px;
+}
+
+.hero{
+    height:350px;
+    background:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f')
+    center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.5);
+    padding:20px;
+    border-radius:10px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.offers{
+    background:aqua;
+    padding:30px;
+    text-align:center;
+}
+
+.offer-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.card{
+    width:250px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2 style="color:aqua;">Rhythm House</h2>
+
+        <ul>
+        
+            <li><a href="Homepage - Copy.html">Home</a></li>
+            <li><a href="Album page.html">Albums</a></li>
+            <li><a href="about us page.html">Abouts</a></li>
+            <li><a href="contact us page.html">Contact</a></li>
+            <li><a href="live shows page - Copy.html">Live shows </a></li>
+            <li><a href="Album listing page.html">Albumlisting</a></li>
+        </ul>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Rhythm House</h1>
+        <p>
+            The ultimate experience for music lovers.
+            Discover albums, live concerts, and exclusive offers.
+        </p>
+    </div>
+</section>
+
+<section class="offers">
+    <h2>Latest Offers 🎁</h2>
+    </div>
+</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Shows & Events - Rhythm House</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Events Page Banner Header -->
+    <header class="shows-header">
+        <h1>🎤 Live Shows & Concerts</h1>
+        <p>Book your tickets for the most anticipated live musical events and music festivals</p>
+    </header>
+
+    <!-- Main Content Event Wrapper -->
+    <main class="shows-container">
+        <h2 class="section-title">Upcoming Live Schedule</h2>
+        
+        <div class="shows-grid">
+            
+            <!-- Event Card 1 -->
+            <div class="show-card">
+                <div class="show-img-box">
+                    <img src="sdfghj.jpg" alt="Concert 1">
+                    <span class="status-badge live">Selling Fast</span>
+                </div>
+                <div class="show-body"
+                    <!-- Performer Name -->
+                    <h3 class="performer">Neon Beats Symphony</h3>
+                    
+                    <!-- Event Details List -->
+                    <div class="event-meta">
+                        <p class="meta-item"><span>📅 Date & Time:</span> June 15, 2026 • 8:00 PM</p>
+                        <p class="meta-item"><span>⏱️ Duration:</span> 2.5 Hours</p>
+                        <p class="meta-item cost"><span>🎟️ Entry Fee:</span> $45.00</p>
+                    </div>
+                    
+                    <p class="show-desc">An immersive electronic synth-wave music concert featuring live laser light displays and visual arts.</p>
+                    <button class="ticket-btn">Book Tickets Now</button>
+                </div>
+            </div>
+
+            <!-- Event Card 2 -->
+            <div class="show-card">
+                <div class="show-img-box">
+                    <img src="dk.jpg" alt="Concert 2">
+                    <span class="status-badge">Available</span>
+                </div>
+                <div class="show-body">
+                    <!-- Performer Name -->
+                    <h3 class="performer">Acoustic Sunset Sessions</h3>
+                    
+                    <!-- Event Details List -->
+                    <div class="event-meta">
+                        <p class="meta-item"><span>📅 Date & Time:</span> June 22, 2026 • 6:30 PM</p>
+                        <p class="meta-item"><span>⏱️ Duration:</span> 3 Hours</p>
+                        <p class="meta-item cost"><span>🎟️ Entry Fee:</span> $25.00</p>
+                    </div>
+                    
+                    <p class="show-desc">Relax and wind down at the beachside with unplugged cover songs performed by indie rock musicians.</p>
+                    <button class="ticket-btn">Book Tickets Now</button>
+                </div>
+            </div>
+
+            <!-- Event Card 3 -->
+            <div class="show-card">
+                <div class="show-img-box">
+                    <img src="cjk.jpg" alt="Concert 3">
+                    <span class="status-badge sold-out">Sold Out</span>
+                </div>
+                <div class="show-body">
+                    <!-- Performer Name -->
+                    <h3 class="performer">The Vintage Classic Orchestra</h3>
+                    
+                    <!-- Event Details List -->
+                    <div class="event-meta">
+                        <p class="meta-item"><span>📅 Date & Time:</span> July 02, 2026 • 7:00 PM</p>
+                        <p class="meta-item"><span>⏱️ Duration:</span> 2 Hours</p>
+                        <p class="meta-item cost"><span>🎟️ Entry Fee:</span> Free Admission</p>
+                    </div>
+                    
+                    <p class="show-desc">A retro tribute night bringing back iconic tracks from legendary musicians arranged in a modern layout setup.</p>
+                    <button class="ticket-btn disabled-btn" disabled>Sold Out</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <style>
+
+    /* Core Styling Configurations */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding-bottom: 60px;
+}
+
+/* Page Header Custom Banner Layout */
+.shows-header {
+    background-color: #4c1d95; /* Elegant Deep Purple Theme */
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 40px;
+}
+
+.shows-header h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.shows-header p {
+    color: #ddd6fe;
+    font-size: 16px;
+}
+
+/* Inner Layout Body Setup */
+.shows-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    color: #0f172a;
+    margin-bottom: 30px;
+    border-left: 5px solid #8b5cf6; /* Purple vertical accent bar indicator line */
+    padding-left: 12px;
+}
+
+/* Alignment Grid for Event Boxes */
+.shows-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Base Card Outer Structure Block */
+.show-card {
+    background-color: #ffffff;
+    width: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column; /* Vertical box items tracking */
+}
+
+/* Relative Image Frame Overlay Container */
+.show-img-box {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    background-color: #cbd5e1;
+}
+
+.show-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Status Labels Overlay Badge Styling */
+.status-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background-color: #10b981; /* Green safe default theme status */
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.status-badge.live {
+    background-color: #f97316; /* Orange alerting variant theme */
+}
+
+.status-badge.sold-out {
+    background-color: #ef4444; /* Critical emergency alert crimson variant */
+}
+
+/* Card Information Body (Flex Height Aligner) */
+.show-body {
+    padding: 25px;
+    flex-grow: 1; /* Magic fix line scales panels up systematically */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Performer Name Header */
+.performer {
+    font-size: 20px;
+    color: #0f172a;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Event Metadata Block Stack Layout */
+.event-meta {
+    background-color: aquamarine;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid aquamarine;
+}
+
+.meta-item {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+.meta-item:last-child {
+    margin-bottom: 0;
+}
+
+.meta-item span {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* Special entry ticket highlighted layout text */
+.meta-item.cost {
+    font-size: 15px;
+    border-top: 1px dashed aquamarine
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+.meta-item.cost span {
+    color: #8b5cf6; /* Highlights key cost value text color marker */
+}
+
+.show-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Button Fixed Footer Alignment Hook */
+.ticket-btn {
+    background-color: #8b5cf6; /* Purple button theme match color */
+    color:aqua;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto; /* Forces item lock to balance beautifully at baseline border points */
+    transition: background 0.2s;
+}
+
+.ticket-btn:hover {
+    background-color: #6d28d9;
+}
+
+/* Disabled Status Out of Stock Modifier State */
+.ticket-btn.disabled-btn {
+    background-color: #cbd5e1;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* Viewport Scale Adjustment Helpers */
+@media (max-width: 768px) {
+    .show-card {
+        width: 100%;
+        max-width: 400px;
+    }
+</style>
+</body>
+</html>
+
+
+<div class="faq-accordion-card">
+  <!-- Section Title -->
+  <header class="faq-header">
+    <span class="faq-tagline">HAVE QUESTIONS?</span>
+    <h2 class="faq-main-title">Frequently Asked Questions</h2>
+  </header>
+
+  <!-- Accordion List Wrapper -->
+  <div class="accordion-wrapper">
+    
+    <!-- Item 1 -->
+    <details class="accordion-item" open>
+      <summary class="accordion-trigger">
+        <span class="q-text">Are the music tracks and audio CDs 100% original?</span>
+        <span class="chevron-icon">▼</span>
+      </summary>
+      <div class="accordion-content">
+        <p>Yes, absolutely. We provide a wide range of original audio CDs and music from all genres across the world. Every product is sourced directly from licensed distributors to guarantee authentic pressing and pristine data longevity.</p>
+      </div>
+    </details>
+
+    <!-- Item 2 -->
+    <details class="accordion-item">
+      <summary class="accordion-trigger">
+        <span class="q-text">How fast is the delivery service to my doorstep?</span>
+        <span class="chevron-icon">▼</span>
+      </summary>
+      <div class="accordion-content">
+        <p>We feature fast delivery processing. Orders are packed immediately following confirmation and shipped through priority logistics providers to secure safe, swift delivery straight to your doorstep.</p>
+      </div>
+    </details>
+
+    <!-- Item 3 -->
+    <details class="accordion-item">
+      <summary class="accordion-trigger">
+        <span class="q-text">What measures secure maximum audio clarity?</span>
+        <span class="chevron-icon">▼</span>
+      </summary>
+      <div class="accordion-content">
+        <p>Premium quality control is our benchmark. Every single product we sell goes through a rigorous quality check phase to ensure maximum audio clarity, reading integrity, and complete absence of dynamic compression artifacting.</p>
+      </div>
+    </details>
+
+  </div>
+</div>
+<style>
+/* Card Wrapper Base Blueprint */
+.faq-accordion-card {
+  background: #ffffff;
+  color: #1f2937;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  max-width: 650px;
+  border-radius: 20px;
+  padding: 40px 30px;
+  margin: 40px auto;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+}
+
+/* Typography Layouts */
+.faq-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-tagline {
+  font-size: 11px;
+  color:#10b981;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.faq-main-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+/* Native Accordion Wrapper Elements */
+.accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion-item {
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Custom interactive summary reset across all major modern engines */
+.accordion-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #111827;
+  cursor: pointer;
+  list-style: none;
+}
+.accordion-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.chevron-icon {
+  font-size: 10px;
+  color: #9ca3af;
+  transition: transform 0.2s ease;
+}
+
+/* Smooth Interactive States using CSS details element binding features */
+.accordion-item[open] {
+  background: #ffffff;
+  border-color: #ff007f;
+  box-shadow: 0 10px 20px rgba(255, 0, 127, 0.03);
+}
+
+.accordion-item[open] .chevron-icon {
+  transform: rotate(180deg);
+  color: #ff007f;
+}
+
+/* Sliding content box spacing rules */
+.accordion-content {
+  padding: 0 20px 20px 20px;
+  border-top: 1px solid transparent;
+}
+
+.accordion-content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+</style>
+<div class="reviews-slider-card">
+  <!-- Section Title Header -->
+  <header class="reviews-header">
+    <span class="reviews-tagline">CUSTOMER FEEDBACK</span>
+    <h2 class="reviews-title">What Music Lovers Say</h2>
+    <div class="global-rating">
+      <span class="stars-gold">★★★★★</span>
+      <span class="rating-number">4.9/5 Overall Store Rating</span>
+    </div>
+  </header>
+
+  <!-- High-Density Reviews Grid -->
+  <div class="testimonials-grid">
+    
+    <!-- Testimonial 1 -->
+    <div class="testimonial-item">
+      <div class="item-top-row">
+        <span class="user-stars">★★★★★</span>
+        <span class="verified-tag">✓ Verified Buyer</span>
+      </div>
+      <p class="review-text">
+        "Absolutely unmatched sound output! We provide a wide range of original audio CDs and music from all genres across the world, and this store is the absolute gold standard. The dynamic audio clarity is phenomenal."
+      </p>
+      <div class="user-profile">
+        <div class="avatar-placeholder">AK</div>
+        <div class="user-meta">
+          <strong class="user-name">Ali Khan</strong>
+          <span class="user-location">Karachi, PK</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial-item">
+      <div class="item-top-row">
+        <span class="user-stars">★★★★★</span>
+        <span class="verified-tag">✓ Verified Buyer</span>
+      </div>
+      <p class="review-text">
+        "Fast delivery straight to your doorstep safely and with speed! I received my package within 24 hours of ordering. Wrapped securely with zero scratches on the jewel cases."
+      </p>
+      <div class="user-profile">
+        <div class="avatar-placeholder">SZ</div>
+        <div class="user-meta">
+          <strong class="user-name">Sarah Zaidi</strong>
+          <span class="user-location">Lahore, PK</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<style>
+/* Container Shell Framework */
+.reviews-slider-card {
+  background: #0f172a;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 850px;
+  border-radius: 24px;
+  padding: 50px 30px;
+  margin: 40px auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Header Text Alignments */
+.reviews-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.reviews-tagline {
+  font-size: 11px;
+  color: #ff007f;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.reviews-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.5px;
+}
+
+.global-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.stars-gold {
+  color: #f59e0b;
+  letter-spacing: 2px;
+}
+
+.rating-number {
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+/* Fluid Desktop Multi-Column Layout Grid */
+.testimonials-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    flex-direction: row;
+  }
+  .testimonial-item {
+    width: 50%;
+  }
+}
+
+/* Individual Testimonial Block Elements */
+.testimonial-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.user-stars {
+  color: #f59e0b;
+  font-size: 14px;
+}
+
+.verified-tag {
+  font-size: 11px;
+  color: #10b981;
+  font-weight: 700;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.review-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin: 0 0 20px 0;
+  font-style: italic;
+}
+
+/* User Profile Row Layout */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 16px;
+}
+
+.avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #ff007f, #7928ca);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.user-meta strong {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.user-meta span {
+  font-size: 12px;
+  color: #64748b;
+}
+</style>
+<footer class="site-footer-card">
+  <div class="footer-grid-container">
+    
+    <!-- Column 1: Brand & Core Promise -->
+    <div class="footer-column brand-summary-box">
+      <div class="footer-logo">🎶 MASTI MUSIC</div>
+      <p class="brand-mission">
+        We provide a wide range of original audio CDs and music from all genres across the world. Our commitment is strictly driven by pristine audio clarity and customer satisfaction.
+      </p>
+      <!-- Real-Time Trust Asset Signal -->
+      <div class="operational-badge">
+        <span class="pulse-dot"></span> Official Store • Active 2026
+      </div>
+    </div>
+
+    <!-- Column 2: Sitemap Navigation Links -->
+    <div class="footer-column Links-navigation-box">
+      <h4 class="column-headline">Explore Store</h4>
+      <ul class="footer-links-list">
+        <li><a href="#home">Home Dashboard</a></li>
+        <li><a href="#about">About Our Vault</a></li>
+        <li><a href="#products">Premium Collections</a></li>
+        <li><a href="#faqs">Help & FAQs</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Category Taxonomy Shortcuts -->
+    <div class="footer-column links-navigation-box">
+      <h4 class="column-headline">Music Genres</h4>
+      <ul class="footer-links-list">
+        <li><a href="#classical">Classical Legends</a></li>
+        <li><a href="#rock">Rock & Pop Hits</a></li>
+        <li><a href="#bollywood">Retro Bollywood</a></li>
+        <li><a href="#audiophile">Studio Masters</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Contact Shortcuts & Logistics Info -->
+    <div class="footer-column logistics-info-box">
+      <h4 class="column-headline">Quick Connect</h4>
+      <p class="logistics-text">📍 Karachi Main Warehouse, PK</p>
+      <p class="logistics-text">📞 Support: +92 300 1234567</p>
+      <p class="logistics-text">⚡ Fast delivery to your doorstep</p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Legal Compliance Bar -->
+  <div class="footer-legal-bar">
+    <p class="copyright-txt">&copy; 2026 Masti Music Inc. All rights reserved.</p>
+    <div class="legal-links">
+      <a href="#privacy">Privacy Policy</a>
+      <span class="spacer">|</span>
+      <a href="#terms">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+<style>
+/* Core Structural Shell Layout */
+.site-footer-card {
+  background: #090a0f;
+  color: #94a3b8;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 60px 20px 20px 20px;
+  border-top: 1px solid #1e293b;
+}
+
+/* Fluid Desktop Multi-Column Grid Engine */
+.footer-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto 50px auto;
+}
+
+@media (min-width: 768px) {
+  .footer-grid-container {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 30px;
+  }
+}
+
+/* Typography and Brand Design Definitions */
+.footer-logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.brand-mission {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0 0 20px 0;
+}
+
+/* Animated Pulse Operational Badge */
+.operational-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background: #ff007f;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #ff007f;
+}
+
+.column-headline {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Sitemap Links Layout Rows */
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links-list a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-links-list a:hover {
+  color: #ff007f;
+}
+
+.logistics-text {
+  font-size: 13px;
+  margin: 0 0 10px 0;
+  color: #94a3b8;
+}
+
+/* Bottom Legal Baseline Component layout rules */
+.footer-legal-bar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 25px;
+  border-top: 1px solid #1e293b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+@media (min-width: 600px) {
+  .footer-legal-bar {
+    flex-direction: row;
+  }
+}
+
+.copyright-txt {
+  font-size: 12px;
+  color: #475569;
+  margin: 0;
+}
+
+.legal-links a {
+  font-size: 12px;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+  color: #94a3b8;
+}
+
+.spacer {
+  color: #1e293b;
+  margin: 0 6px;
+  font-size: 11px;
+}
+</style>
+<footer class="compact-footer-card">
+  <div class="footer-inner-container">
+    
+    
+    <div class="footer-top-row">
+      <div class="footer-brand-mark">🎶 MASTI MUSIC</div>
+      <p class="footer-promise-text">
+        We provide a wide range of original audio CDs and music from all genres across the world with fast delivery straight to your doorstep safely and with speed.
+      </p>
+    </div>
+
+    <!-- Middle Row: High-Density Micro Links -->
+    <div class="footer-mid-row">
+      <div class="footer-micro-links">
+        <a href="#about">About Us</a>
+        <a href="#products">Collections</a>
+        <li>🛡️ Every product goes through a rigorous quality check</li>
+      </div>
+    </div>
+
+    <!-- Bottom Row: Compliance & Secure Signals -->
+    <div class="footer-base-row">
+      <p class="footer-copyright">&copy; 2026 Masti Music. All rights reserved.</p>
+      <div class="footer-trust-indicators">
+        <span class="trust-pill">Verified Authentic</span>
+        <span class="trust-pill">Studio Grade</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<style>
+/* Component Container Shell */
+.compact-footer-card {
+  background: #0b0f19;
+  color: #94a3b8;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 40px 20px 20px 20px;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-inner-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Identity & Promise Row Typography */
+.footer-top-row {
+  text-align: center;
+}
+
+.footer-brand-mark {
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.footer-promise-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Middle Layout Micro Navigation Lists */
+.footer-mid-row {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 14px 0;
+}
+
+.footer-micro-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+.footer-micro-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-micro-links a:hover {
+  color: #ff007f;
+}
+
+.footer-micro-links li {
+  color: #475569;
+  font-weight: 500;
+}
+
+/* Bottom Compliance and Trust Row Layout rules */
+.footer-base-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+@media (min-width: 600px) {
+  .footer-base-row {
+    flex-direction: row;
+  }
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: #475569;
+  margin: 0;
+}
+
+.footer-trust-indicators {
+  display: flex;
+  gap: 8px;
+}
+
+.trust-pill {
+  background: rgba(255, 255, 255, 0.03);
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+</style>
+<footer>
+    <p>© 2026 Rhythm House | All Rights Reserved</p>.</p>
+    </footer>
+</body>
+</html>
+

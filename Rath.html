@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #263347;">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahat Fateh Ali Khan - Iconic Songs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       
+        <!-- 🏠 HOME LINK NAVIGATION BAR -->
+        <div class="nav-bar">
+            <a href="Homepage.html" class="home-link">
+                <span class="home-icon">🏠</span> Home
+            </a>
+        </div>
+    <div class="songs-dashboard">
+        <!-- Main Title Headers -->
+        <h1 class="main-title">Rahat Fateh Ali Khan - Iconic Songs</h1>
+        <p class="subtitle">The Legend of Qawwali and South Asian Playback Music</p>
+
+        <!-- Tracklist Rows Container -->
+        <div class="songs-list">
+            
+            <!-- Track 01 -->
+            <div class="song-card-row">
+                <div class="song-info-left">
+                    <span class="track-id-num">01</span>
+                    <div class="title-details">
+                        <h3>O Re Piya</h3>
+                        <p>Movie: Aaja Nachle (2007)</p>
+                    </div>
+                </div>
+                <span class="status-pill badge-yellow">Sufi Classical Hit</span>
+            </div>
+
+            <!-- Track 02 -->
+            <div class="song-card-row">
+                <div class="song-info-left">
+                    <span class="track-id-num">02</span>
+                    <div class="title-details">
+                        <h3>Afreen Afreen</h3>
+                        <p>Coke Studio Season 9 (2016)</p>
+                    </div>
+                </div>
+                <span class="status-pill badge-pink">Mega Viral Classic</span>
+            </div>
+
+            <!-- Track 03 -->
+            <div class="song-card-row">
+                <div class="song-info-left">
+                    <span class="track-id-num">03</span>
+                    <div class="title-details">
+                        <h3>Zaroori Tha</h3>
+                        <p>Album: Back 2 Love (2014)</p>
+                    </div>
+                </div>
+                <span class="status-pill badge-green">1 Billion+ Views</span>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+<style>
+/* Container Box with Exact Dark Theme Color */
+.songs-dashboard {
+    background-color: #1a2332; /* Rich dark blue slate background from your screenshot */
+    padding: 40px;
+    max-width: 650px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 4px;
+}
+
+/* Headings Typography Layout */
+.main-title {
+    color: #319ced; /* Vibrant sky blue text */
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: #8fa0b5; /* Soft muted grey text */
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+/* Track list Grid Flex Alignment */
+.songs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Individual Songs Card Row Component */
+.song-card-row {
+    background-color: #263347; /* Lighter box container overlay */
+    padding: 20px 24px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between; /* Spreads name to left and badge to right */
+    align-items: center;
+    border: 1px solid #2e3e56;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.song-card-row:hover {
+    background-color: #2c3c54;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.song-info-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Big Bright Tracker ID Numbers */
+.track-id-num {
+    color: #2da1f8;
+    font-size: 26px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+}
+
+/* Track Metadata Content Text fields */
+.title-details h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 4px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.title-details p {
+    color: #a2b4cc;
+    font-size: 14px;
+}
+
+/* ====== EXACT COLOR MATCH BADGES PILLS ====== */
+.status-pill {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 20px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Card 1 Badge: Golden Yellow */
+.badge-yellow {
+    background-color: #f5b016;
+    color: #1a2332;
+}
+
+/* Card 2 Badge: Hot Pink */
+.badge-pink {
+    background-color: #ec407a;
+    color: #ffffff;
+}
+
+/* Card 3 Badge: Emerald Green */
+.badge-green {
+    background-color: #00c853;
+    color: #ffffff;
+}
+
+/* Mobile Responsiveness View Adjustments */
+@media (max-width: 550px) {
+    .song-card-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+    .status-pill {
+        align-self: flex-end; /* Mobile formats force badge to corner lines */
+    }
+}
+</style>
+</body>
+</html>

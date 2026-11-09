@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Contact us</title>
+</head>
+<body style="background-color:gray;">
+ <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:aquamarine;
+}
+
+header{
+    background:#2563eb;
+    padding:0px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin:0 10px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+.search-box input{
+    padding:6px;
+}
+
+.hero{
+    height:350px;
+    background:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f')
+    center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.5);
+    padding:20px;
+    border-radius:10px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.offers{
+    background:aqua;
+    padding:30px;
+    text-align:center;
+}
+
+.offer-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.card{
+    width:250px;
+    background:aqua;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:darkorange
+}
+
+.card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
+}
+
+footer{
+    background:grey;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2 style="color:aqua;">Rhythm House</h2>
+
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="Album page.html">Albums</a></li>
+            <li><a href="about us page.html">About</a></li>
+            <li><a href="contact us page.html">Contact</a></li>
+             <li><a href="live shows page.html">Liveshows</a></li>
+                <li><a href="Album listing page.html">Albumlisting</a></li>
+
+        </ul>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search">
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Rhythm House</h1>
+        <p>
+            The ultimate experience for music lovers.
+            Discover albums, live concerts, and exclusive offers.
+        </p>
+    </div>
+</section>
+
+<section class="offers">
+    <h2>Latest Offers 🎁</h2>
+    </div>
+</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers & Contests - Rhythm House</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Page Header -->
+    <header class="page-header">
+        <h1>🎁 Offers & Contests</h1>
+        <p>Win Exciting Prizes and Get Exclusive Shop Discounts!</p>
+    </header>
+
+    <main class="main-content">
+        
+        <!-- SECTION 1: CURRENT OFFERS (Equal Height Cards Layout) -->
+        <section class="offers-section">
+            <h2 class="section-title">🔥 Current Shop Offers</h2>
+            <div class="card-grid">
+                
+                <!-- Offer 1 -->
+                <div class="offer-card">
+                    <div class="badge">Limited Time</div>
+                    <div class="card-body">
+                        <h3>Flat 20% OFF On CDs</h3>
+                        <p>Get amazing discounts on all music CDs this week. Use code at checkout.</p>
+                        <div class="promo-code">CODE: <span>RHYTHM20</span></div>
+                        <button class="action-btn">Shop Now</button>
+                    </div>
+                </div>
+
+                <!-- Offer 2 -->
+                <div class="offer-card">
+                    <div class="badge">Mega Deal</div>
+                    <div class="card-body">
+                        <h3>Buy 1 Get 1 Free</h3>
+                        <p>Buy any vinyl record store album product and get another one absolutely free!</p>
+                        <div class="promo-code">Automatic Discount</div>
+                        <button class="action-btn">View Vinyls</button>
+                    </div>
+                </div>
+
+                <!-- Offer 3 -->
+                <div class="offer-card">
+                    <div class="badge">Weekend Only</div>
+                    <div class="card-body">
+                        <h3>Free Shipping</h3>
+                        <p>Enjoy free nationwide delivery on all audio equipment orders above $50.</p>
+                        <div class="promo-code">CODE: <span>FREESHIP</span></div>
+                        <button class="action-btn">Claim Offer</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 2 & 3: LUCKY DRAW & COMPETITIONS (Split Layout) -->
+        <div class="split-container">
+            
+            <!-- LUCKY DRAW FEATURE -->
+            <section class="split-box lucky-draw">
+                <h2>🎟️ Monthly Lucky Draw</h2>
+                <p class="box-desc">Enter your details below to win a premium wireless headphone this month!</p>
+                
+                <form class="draw-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Free Entry</button>
+                </form>
+
+                <div class="prev-winner">
+                    <span>🎉 Last Month's Winner:</span> <strong>Ali Khan (Karachi)</strong>
+                </div>
+            </section>
+
+            <!-- COMPETITIONS FEATURE -->
+            <section class="split-box competitions">
+                <h2>🎤 Live Competitions</h2>
+                <p class="box-desc">Show your talent or knowledge to win concert tickets and store cash awards!</p>
+                
+                <div class="contest-list">
+                    <!-- Contest 1 -->
+                    <div class="contest-item">
+                        <div class="contest-info">
+                            <h4>Weekly Music Quiz</h4>
+                            <p>Answer 10 simple music history questions correctly.</p>
+                        </div>
+                        <button class="contest-btn">Play Quiz</button>
+                    </div>
+
+                    <!-- Contest 2 -->
+                    <div class="contest-item">
+                        <div class="contest-info">
+                            <h4>Singing Star 2026</h4>
+                            <p>Upload your 1-minute audio singing clip and get votes.</p>
+                        </div>
+                        <button class="contest-btn btn-secondary">Upload Track</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+<style>
+    /* Universal Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:aqua; /* Slate grey background for clean contrast */
+    color: #1e293b;
+    padding-bottom: 60px;
+}
+
+/* Page Header Banner */
+.page-header {
+    background-color: #1e1b4b; /* Deep Indigo color */
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #cbd5e1;
+    font-size: 16px;
+}
+
+/* Container Wrapper */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sections Global Headers */
+.section-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #0f172a;
+    border-left: 5px solid #ef4444; /* Red accent mark line */
+    padding-left: 10px;
+}
+
+/* SECTION 1: Grid Equal Height Configurations */
+.card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.offer-card {
+    background-color:aqua;
+    width: 350px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+/* Badge overlay code */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ef4444; /* Sale alert red badge */
+    color:aqua;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.offer-card .card-body {
+    padding: 30px 25px;
+    flex-grow: 1; /* Magic scale line to keep cards height level */
+    display: flex;
+    flex-direction: column;
+}
+
+.offer-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #1e1b4b;
+    padding-right: 70px; /* Room for badges */
+}
+
+.offer-card p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Promo Voucher Container box styling */
+.promo-code {
+    background-color:aquamarine;
+    border: 1px dashed #cbd5e1;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.promo-code span {
+    color: #2563eb; /* Code key highlight color blue */
+    font-weight: bold;
+}
+
+/* Base Primary Utility Button Styles */
+.action-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto; /* Absolute forced lock to keep buttons in perfect alignment alignment */
+    transition: background 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* SECTIONS 2 & 3: Flex Layout Columns */
+.split-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.split-box {
+    background-color:aquamarine;
+    flex: 1;
+    min-width: 340px;
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.split-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.box-desc {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Lucky Draw Entry Form layout components */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #475569;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+}
+
+.submit-btn {
+    background-color: #10b981; /* Green Button for Forms submission */
+    color:aquamarine;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #059669;
+}
+
+.prev-winner {
+    margin-top: 25px;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Competitions Feed items styles module */
+.contest-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contest-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:aqua;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    gap: 15px;
+}
+
+.contest-info h4 {
+    font-size: 16px;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.contest-info p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.contest-btn {
+    background-color: #7c3aed; /* Purple custom theme buttons for games */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.contest-btn:hover {
+    background-color: #6d28d9;
+}
+
+.contest-btn.btn-secondary {
+    background-color: #475569; /* Slate secondary buttons alternate color */
+}
+
+.contest-btn.btn-secondary:hover {
+    background-color: #334155;
+}
+
+/* Mobile responsive view query blocks */
+@media(max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+    }
+    .contest-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contest-btn {
+        width: 100%;
+    }
+}
+</style>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Shop - Rhythm House</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+
+    <!-- Main Shop Container -->
+    <main class="shop-container">
+        
+        <div class="product-grid">
+            
+            <!-- Product 1 -->
+         
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Shop - Rhythm House</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Shop Banner -->
+    <header class="shop-header">
+        <h1>🛒 Rhythm House Shop</h1>
+        <p>Buy your favorite music CDs, vinyl records, and premium audio gear</p>
+    </header>
+
+    <!-- Main Shop Container -->
+    <main class="shop-container">
+        
+        <div class="product-grid">
+            
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="Retro Hits Vol. 1.jpg"" alt="CD">
+                </div>
+                <div class="product-body">
+                    <span class="category">CDs</span>
+                    <h3>Retro Hits Vol. 1</h3>
+                    <p class="price">$15.00 <span class="old-price">$20.00</span></p>
+                    <p class="description">A special curated collection of the greatest hits from the golden era. Crystal clear audio quality.</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="ujm.jpg" alt="Vinyl">
+                </div>
+                <div class="product-body">
+                    <span class="category">Vinyl Records</span>
+                    <h3>Vintage Symphony (Vinyl)</h3>
+                    <p class="price">$35.00</p>
+                    <p class="description">Authentic heavyweight vinyl record for true classic music lovers and collectors.</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="uj ,mm.jpg" alt="Headphones">
+                </div>
+                <div class="product-body">
+                    <span class="category">Audio Gear</span>
+                    <h3>Wireless Pro Headphones</h3>
+                    <p class="price">$89.00 <span class="old-price">$110.00</span></p>
+                    <p class="description">Premium studio quality headphones featuring deep extra bass and advanced active noise cancellation features.</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+    <p>© 2026 Rhythm House | All Rights Reserved</p>
+</footer>
+    <style>
+/* Universal Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Shop Header */
+.shop-header {
+    background-color: #0f172a; /* Dark Slate Blue */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+}
+
+.shop-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.shop-header p {
+    color:black;
+    font-size: 15px;
+}
+
+/* Main Layout Grid */
+.shop-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Product Card Skeleton */
+.product-card {
+    background-color: #ffffff;
+    width: 340px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column; /* Content stacks from top to bottom */
+}
+
+/* Product Image Box */
+.product-img {
+    height: 220px;
+    width: 100%;
+    background-color: #cbd5e1;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Product Body (Magic Equal Height) */
+.product-body {
+    padding: 20px;
+    flex-grow: 1; /* Automatically stretches all cards to the same height */
+    display: flex;
+    flex-direction: column;
+}
+
+.category {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #3b82f6; /* Blue tag */
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.product-body h3 {
+    font-size: 18px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #10b981; /* Green Price text */
+    margin-bottom: 12px;
+}
+
+.old-price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #94a3b8;
+    margin-left: 8px;
+}
+
+.product-body .description {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Button Fixed Alignment */
+.buy-btn {
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto; /* Absolute lock to keep buttons pinned perfectly to the bottom */
+    transition: background 0.2s;
+}
+
+.buy-btn:hover {
+    background-color: #3b82f6; /* Blue background on hover */
+}
+
+/* Responsive Grid for Mobile Screens */
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+</style>
+</body>
+</html>
+
+</body>
+</html>
+
+
+
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

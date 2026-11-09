@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Zafar - Top Tracks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-container">
+        <!-- 🏠 HOME LINK NAVIGATION BAR -->
+        <div class="nav-bar">
+            <a href="index.html" class="home-link">
+                <span class="home-icon">🏠</span> Home
+            </a>
+        </div>
+
+        <h1 class="title">Ali Zafar - Iconic Songs</h1>
+        <p class="subtitle">The Core Pillar of Pakistani Pop Music</p>
+
+        <!-- Song Card 1: Channo -->
+        <div class="song-card">
+            <div class="song-info">
+                <span class="song-number">01</span>
+                <div>
+                    <h3 class="song-title">Channo</h3>
+                    <p class="album-name">Album: Huqa Pani (2003)</p>
+                </div>
+            </div>
+            <span class="badge debut">Debut Hit</span>
+        </div>
+
+        <!-- Song Card 2: Jhoom -->
+        <div class="song-card">
+            <div class="song-info">
+                <span class="song-number">02</span>
+                <div>
+                    <h3 class="song-title">Jhoom</h3>
+                    <p class="album-name">Album: Jhoom (2011)</p>
+                </div>
+            </div>
+            <span class="badge classic">Sufi Classic</span>
+        </div>
+
+        <!-- Song Card 3: PSL Anthems -->
+        <div class="song-card">
+            <div class="song-info">
+                <span class="song-number">03</span>
+                <div>
+                    <h3 class="song-title">Ab Khel Jamay Ga</h3>
+                    <p class="album-name">PSL Official Anthem</p>
+                </div>
+            </div>
+            <span class="badge anthem">Stadium Anthem</span>
+        </div>
+    </div>
+
+<style>
+/* Import Google Font */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Dark modern background */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main container style */
+.music-container {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* 🏠 NEW HOME LINK STYLE */
+.nav-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 14px;
+    background: #334155;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.home-link:hover {
+    color: #38bdf8;
+    background: #475569;
+    border-color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+.home-icon {
+    font-size: 16px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #38bdf8; /* Beautiful sky blue color */
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+/* Song cards style */
+.song-card {
+    background: #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.2s, background 0.2s;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.song-card:hover {
+    transform: scale(1.03);
+    background: #475569;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.song-number {
+    font-size: 20px;
+    font-weight: 600;
+    color: #38bdf8;
+}
+
+.song-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.album-name {
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+/* Badges style */
+.badge {
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.debut { background-color: #eab308; color: #000; }
+.classic { background-color: #ec4899; color: #fff; }
+.anthem { background-color: #22c55e; color: #fff; }
+</style>
+</body>
+</html>

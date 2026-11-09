@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+</head>
+<body>
+<div style="width: 350px; background: #fff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; font-family: Arial, sans-serif;">
+    <!-- img-->
+    <img src="qiokbxnz.jpg" style="width: 100%; height: 250px; object-fit: cover;">
+    
+    <!-- -->
+    <div style="padding: 20px;">
+        <h2 style="margin: 0; font-size: 2rem; color: #333;">Mystic Nights</h2>
+        <p style="margin: 10px 0; color: #777; font-size: 1.1rem;">Artist: Rahat Fateh Ali Khan</p>
+        
+        <p style="color: #333; line-height: 1.5; margin: 20px 0;">
+            A soulful journey through classical Qawwali and modern Sufi melodies.
+        </p>
+        
+        <!--hj-->
+        <div style="font-size: 1.5rem; color: #007bff; font-weight: bold; margin-bottom: 20px;">
+            Rs 1800
+        </div>
+        
+        <!-- لنک بٹن -->
+        <a href="mystic.html" style="display: block; background: #007bff; color: white; text-align: center; padding: 12px; border-radius: 5px; text-decoration: none; font-size: 1.1rem; font-weight: bold;">View Details</a>
+    </div>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Nights - Details</title>
+    <!-- Bootstrap & FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+        .album-detail, .reviews-container, .order-container {
+            max-width: 800px; margin: 30px auto; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .album-detail img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; }
+        .price-tag { font-size: 1.6rem; color: #007bff; font-weight: bold; margin: 15px 0; }
+        .tracklist ul { list-style: none; padding-left: 0; }
+        .tracklist li { margin: 10px 0; background: #f9f9f9; padding: 10px; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; }
+        .review-card { background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Header -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="albums.html"><i class="fas fa-music"></i> MelodyStore</a>
+    </div>
+</nav>
+
+<!-- Album Presentation Card -->
+<div class="album-detail">
+    <img src="uojkm.jpg" alt="Mystic Nights Album">
+    <h1 class="mt-3">Mystic Nights</h1>
+    <p><strong>Artist:</strong> Rahat Fateh Ali Khan</p>
+    <p><strong>Genre:</strong> Sufi / Classical</p>
+    <div class="price-tag">Rs 1800</div>
+    
+    <h2>Description</h2>
+    <p>A soulful journey through classical Qawwali and modern Sufi melodies.</p>
+
+    <!-- Interactive Track previews -->
+   
+
+    <!-- Buy Trigger Button -->
+    <button onclick="toggleOrderForm()" class="btn btn-success w-100 mt-3" style="background-color: #28a745; font-size: 1.2rem;">
+        <i class="fas fa-shopping-cart"></i> Order via WhatsApp
+    </button>
+</div>
+
+<!-- Order Delivery Form Interface -->
+<div id="orderFormContainer" class="order-container" style="display: none;">
+    <h3 style="color: #28a745;">Shipping Details</h3>
+    <form id="sufiOrderForm">
+        <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" id="custName" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" id="custPhone" class="form-control" placeholder="03001234567" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Shipping Address</label>
+            <textarea id="custAddress" class="form-control" rows="2" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Confirm Order on WhatsApp</button>
+    </form>
+</div>
+
+<!-- Reviews Panel -->
+<div class="reviews-container">
+    <h2>Customer Feedback</h2>
+    <div class="review-card">
+        <h4>Usman Raza ⭐⭐⭐⭐⭐</h4>
+        <p>Rahat Fateh Ali Khan’s voice makes this album special. Soulful music!</p>
+    </div>
+</div>
+
+<!-- Form Interaction Scripts -->
+<script>
+function toggleOrderForm() {
+    var formBox = document.getElementById("orderFormContainer");
+    formBox.style.display = (formBox.style.display === "none") ? "block" : "none";
+    if(formBox.style.display === "block") formBox.scrollIntoView({ behavior: 'smooth' });
+}
+
+document.getElementById('sufiOrderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    var name = document.getElementById('custName').value;
+    var phone = document.getElementById('custPhone').value;
+    var address = document.getElementById('custAddress').value;
+    
+    // Add your real phone digits configuration link here
+    var myWhatsAppNumber = "923001234567"; 
+
+    var message = "*New Album Order Received!* \n\n" +
+                  "*Album Name:* Mystic Nights\n" +
+                  "*Customer Name:* " + name + "\n" +
+                  "*Contact Number:* " + phone + "\n" +
+                  "*Shipping Address:* " + address + "\n" +
+                  "*Total Bill:* Rs 1800";
+                  
+    var whatsappUrl = "https://wa.me" + myWhatsAppNumber + "?text=" + encodeURIComponent(message);
+    window.open(whatsappUrl, '_blank');
+    this.reset();
+});
+</script>
+
+</body>
+</html>
+<a href="mystic.html" class="btn-view">View Details</a>
+<!-- Promo Code Area -->
+<div class="mb-3 p-3 style-coupon" style="background: #fdfefe; border: 1px dashed #007bff; border-radius: 5px;">
+    <label class="form-label font-weight-bold">Have a Promo Code?</label>
+    <div class="input-group">
+        <input type="text" id="couponInput" class="form-control" placeholder="Enter coupon code (e.g., SUFI20)">
+        <button class="btn btn-outline-primary" type="button" onclick="applyDiscount()">Apply</button>
+    </div>
+    <small id="couponMessage" class="form-text d-block mt-1"></small>
+</div>
+<!-- Dynamic Bill Pricing Layout -->
+<div class="price-tag">
+    Price: <span id="displayPrice">Rs 1800</span>
+    <del id="originalPrice" style="color: #dc3545; font-size: 1.1rem; margin-left: 10px; display: none;">Rs 1800</del>
+</div>
+<script>
+// Variable to store final checked price rate values
+let finalPrice = 1800;
+
+function applyDiscount() {
+    const code = document.getElementById('couponInput').value.trim().toUpperCase();
+    const msg = document.getElementById('couponMessage');
+    const display = document.getElementById('displayPrice');
+    const oldPriceDisplay = document.getElementById('originalPrice');
+
+    if (code === 'SUFI20') {
+        finalPrice = 1440; // 20% discount calculation off Rs 1800 flat rate
+        display.innerText = "Rs 1440";
+        display.style.color = "#28a745"; // Shifts price label text to green
+        oldPriceDisplay.style.display = "inline";
+        
+        msg.innerText = "Success! 20% discount applied.";
+        msg.style.color = "#28a745";
+    } else if (code === "") {
+        msg.innerText = "Please enter a code.";
+        msg.style.color = "#dc3545";
+    } else {
+        msg.innerText = "Invalid coupon code. Try 'SUFI20'.";
+        msg.style.color = "#dc3545";
+    }
+}
+// Locate this specific configuration string inside your sufiOrderForm event handler
+"*Total Bill:* Rs " + finalPrice;
+</script>
+<!-- Floating Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+<style>
+#backToTopBtn {
+    display: none; /* Hidden by default; displayed on scroll */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#backToTopBtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Slight pop effect on hover */
+}
+</style>
+<script>
+/* Ensure smooth scrolling for the entire document */
+html {
+    scroll-behavior: smooth;
+}
+</script>
+<!-- Newsletter Subscription Modal -->
+<div class="modal fade" id="newsletterModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 12px; border: none; box-shadow: 0 5px 25px rgba(0,0,0,0.2);">
+            <div class="modal-header" style="background-color: #007bff; color: white; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+                <h5 class="modal-title"><i class="fas fa-envelope-open-text me-2"></i> Join Our Club!</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 text-center">
+                <h4>Get 10% Off Your First Purchase</h4>
+                <p class="text-muted">Subscribe to our newsletter to receive updates on new album releases from Ali Zafar, Rahat Fateh Ali Khan, and more!</p>
+                
+                <form id="subscriberForm">
+                    <div class="mb-3">
+                        <input type="email" id="subscriberEmail" class="form-control" placeholder="Enter your email address" required style="padding: 10px;">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" style="padding: 10px; font-weight: bold;">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Check if the user has already subscribed or closed this before
+    if (!localStorage.getItem("newsletterSubscribed")) {
+        // Automatically show the popup modal after a 3-second delay
+        setTimeout(() => {
+            const newsletterModal = new bootstrap.Modal(document.getElementById('newsletterModal'));
+            newsletterModal.show();
+        }, 3000);
+    }
+});
+
+// Handle the subscriber form submission
+document.getElementById('subscriberForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('subscriberEmail').value;
+    
+    // Save state to browser storage so it doesn't pop up again for this user
+    localStorage.setItem("newsletterSubscribed", "true");
+    
+    // Hide the modal manually
+    const modalElement = document.getElementById('newsletterModal');
+    const modalInstance = bootstrap.Modal.getInstance(modalElement);
+    modalInstance.hide();
+    
+    // Show confirmation to the user
+    alert("Thank you for subscribing with: " + email + "\nCheck your inbox soon for your 10% discount code!");
+    this.reset();
+});
+</script>
+<!-- Album Heading with Dynamic Rating Display -->
+<h1 class="mt-3">Mystic Nights</h1>
+<p><strong>Artist:</strong> Rahat Fateh Ali Khan</p>
+<p><strong>Genre:</strong> Sufi / Classical</p>
+
+<!-- Live Rating Summary Badge -->
+<div class="mb-3" style="background: #fdfefe; border: 1px solid #ddd; padding: 8px 15px; display: inline-block; border-radius: 20px; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+    <span style="color: #ffc107;"><i class="fas fa-star"></i> Rating:</span> 
+    <span id="averageStars">Calculating...</span> 
+    <span class="text-muted" style="font-size: 0.85rem; font-weight: normal;" id="reviewCount">(0 reviews)</span>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Run the calculator when the page first loads
+    calculateAverageRating();
+});
+
+function calculateAverageRating() {
+    // 1. Gather all individual review cards currently on the page
+    const reviewCards = document.querySelectorAll('.review-card');
+    const totalReviews = reviewCards.length;
+
+    if (totalReviews === 0) {
+        document.getElementById('averageStars').innerText = "0.0";
+        document.getElementById('reviewCount').innerText = "(0 reviews)";
+        return;
+    }
+
+    let totalStarsCombined = 0;
+
+    // 2. Loop through each card and count how many star emojis are written in the heading
+    reviewCards.forEach(card => {
+        const headingText = card.querySelector('h4').innerText;
+        // Count occurrences of the star emoji character
+        const starCount = (headingText.match(/⭐/g) || []).length;
+        totalStarsCombined += starCount;
+    });
+
+    // 3. Compute the accurate mathematical average
+    const dynamicAverage = (totalStarsCombined / totalReviews).toFixed(1);
+
+    // 4. Print the fresh metrics back onto the page badge elements
+    document.getElementById('averageStars').innerText = dynamicAverage + " / 5.0";
+    document.getElementById('reviewCount').innerText = "(" + totalReviews + " customer reviews)";
+}
+
+// 5. Update your existing Review Form script so it refreshes the calculations on submit!
+// Make sure to add this single line at the very end of your review form submit listener:
+// calculateAverageRating();
+</script>
+<!-- Full Screen Loading Overlay Animation -->
+<div id="loadingOverlay" style="position: fixed; top:0; left:0; width:100%; height:100%; background:#ffffff; z-index:9999; display:flex; align-items:center; justify-content:center; flex-direction:column; transition: opacity 0.5s ease;">
+    <!-- Spin Wheel -->
+    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem; margin-bottom: 15px;"></div>
+    <h5 style="color: #333; font-family: Arial, sans-serif; font-weight: bold;">Loading MelodyStore...</h5>
+</div>
+<style>
+/* Dark Mode Override for Loading Screen */
+body.dark-theme #loadingOverlay {
+    background-color: #121212 !important;
+}
+body.dark-theme #loadingOverlay h5 {
+    color: #ffffff !important;
+}
+</style>
+<script>
+// Monitor the global window engine state
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("loadingOverlay");
+    if (preloader) {
+        // Apply smooth transition opacity fade out
+        preloader.style.opacity = "0";
+        // Remove from structural view entirely after animation completes
+        setTimeout(() => {
+            preloader.remove();
+        }, 500);
+    }
+});
+</script>
+        <!-- Track 2 -->
+       
+        </li>
+        <!-- Track 3 -->
+       
+<script>
+function manageAudio(audioElementId, clickButton) {
+    const targetAudio = document.getElementById(audioElementId);
+    
+    // 1. Pause and reset all other audio elements playing on the site
+    document.querySelectorAll('.tracklist audio').forEach(audioStream => {
+        if (audioStream !== targetAudio) {
+            audioStream.pause();
+            audioStream.currentTime = 0;
+            // Revert companion control button icons back to play state
+            const playButtonSibling = audioStream.nextElementSibling;
+            if (playButtonSibling) {
+                playButtonSibling.innerHTML = '<i class="fas fa-play"></i> Preview';
+                playButtonSibling.className = "btn btn-sm btn-outline-primary";
+            }
+        }
+    });
+
+    // 2. Toggle playback state for the target selection
+    if (targetAudio.paused) {
+        targetAudio.play();
+        clickButton.innerHTML = '<i class="fas fa-pause"></i> Pause';
+        clickButton.className = "btn btn-sm btn-danger"; // Swaps button to an alert state color
+    } else {
+        targetAudio.pause();
+        clickButton.innerHTML = '<i class="fas fa-play"></i> Preview';
+        clickButton.className = "btn btn-sm btn-outline-primary";
+    }
+
+    // 3. Reset button visual if the song finishes playing completely
+    targetAudio.onended = function() {
+        clickButton.innerHTML = '<i class="fas fa-play"></i> Preview';
+        clickButton.className = "btn btn-sm btn-outline-primary";
+    };
+}
+</script>
+<!-- Live Checkout Breakdown Receipt -->
+<div class="p-3 my-3" style="background: #fdfefe; border: 1px solid #ddd; border-radius: 6px;">
+    <h5 style="color: #333; margin-bottom: 12px;"><i class="fas fa-file-invoice-dollar me-2"></i> Order Summary</h5>
+    <table class="table table-sm table-borderless style-receipt mb-0" style="font-size: 0.95rem; color: #555;">
+        <tr>
+            <td>Mystic Nights Album Subtotal:</td>
+            <td class="text-end" id="receiptSubtotal">Rs 1800</td>
+        </tr>
+        <tr>
+            <td>Shipping & Handling Fee:</td>
+            <td class="text-end" id="receiptShipping">Rs 150</td>
+        </tr>
+        <tr style="border-top: 1px dashed #ccc; font-weight: bold; font-size: 1.1rem; color: #000;">
+            <td class="pt-2">Total Amount Due:</td>
+            <td class="text-end pt-2" id="receiptTotal" style="color: #28a745;">Rs 1950</td>
+        </tr>
+    </table>
+</div>
+<script>
+// Variable configurations
+let shippingFee = 150; 
+
+// Run event tracker updates when payment options change
+const paymentSelector = document.getElementById('paymentMethod');
+if (paymentSelector) {
+    paymentSelector.addEventListener('change', function() {
+        calculateReceiptValues();
+    });
+}
+
+function calculateReceiptValues() {
+    const paymentOption = document.getElementById('paymentMethod').value;
+    const subtotalDisplay = document.getElementById('receiptSubtotal');
+    const shippingDisplay = document.getElementById('receiptShipping');
+    const totalDisplay = document.getElementById('receiptTotal');
+
+    // 1. Calculate values based on active coupon price states
+    // 'finalPrice' is fetched from your earlier coupon system variable
+    subtotalDisplay.innerText = "Rs " + finalPrice;
+
+    // 2. Adjust delivery charges depending on payment method
+    if (paymentOption === "JazzCash") {
+        shippingFee = 50; // Cheaper fee for instant advance transfers
+    } else {
+        shippingFee = 150; // Standard charge for Cash on Delivery physical transit
+    }
+    shippingDisplay.innerText = "Rs " + shippingFee;
+
+    // 3. Mathematical summary breakdown calculation
+    let calculatedTotal = finalPrice + shippingFee;
+    totalDisplay.innerText = "Rs " + calculatedTotal;
+}
+
+// 4. FIX: Add this line to the very end of your existing applyDiscount() coupon checker function:
+// calculateReceiptValues();
+
+// 5. FIX: Update your final WhatsApp text formatter variable string inside your main submission script:
+// var finalTotalBill = finalPrice + shippingFee;
+// "*Total Bill:* Rs " + finalTotalBill;
+</script>
+<!-- Related Albums Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">
+        <i class="fas fa-compact-disc"></i> Related Albums
+    </h2>
+
+    <div class="row">
+
+        <!-- Album 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="ali-zafar.jpg" class="card-img-top" alt="Ali Zafar Album">
+                <div class="card-body">
+                    <h5 class="card-title">Jhoom</h5>
+                    <p class="card-text">Artist: Ali Zafar</p>
+                    <p class="text-primary fw-bold">Rs 1600</p>
+                    <a href="jhoom.html" class="btn btn-primary w-100">
+                        View Album
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Album 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="atif-aslam.jpg" class="card-img-top" alt="Atif Aslam Album">
+                <div class="card-body">
+                    <h5 class="card-title">Doorie</h5>
+                    <p class="card-text">Artist: Atif Aslam</p>
+                    <p class="text-primary fw-bold">Rs 1700</p>
+                    <a href="doorie.html" class="btn btn-primary w-100">
+                        View Album
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Album 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <img src="nusrat.jpg" class="card-img-top" alt="Nusrat Album">
+                <div class="card-body">
+                    <h5 class="card-title">Best of Qawwali</h5>
+                    <p class="card-text">Artist: Nusrat Fateh Ali Khan</p>
+                    <p class="text-primary fw-bold">Rs 2000</p>
+                    <a href="nusrat.html" class="btn btn-primary w-100">
+                        View Album
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-4 mt-5">
+    <h5>MelodyStore</h5>
+    <p>Best Music Albums Collection</p>
+    <p>&copy; 2026 MelodyStore. All Rights Reserved.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

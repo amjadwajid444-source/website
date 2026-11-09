@@ -1,0 +1,507 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rhythm House | Albums</title>
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --primary-dark: #0b5ed7;
+      --gold: #f4b942;
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --text: #18181b;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { text-decoration: none; }
+    img { display: block; width: 100%; }
+
+    .topbar {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: opacity 0.2s ease;
+    }
+
+    .menu a:hover { opacity: 0.8; }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      min-width: 220px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 8px 12px;
+      border-radius: 999px;
+    }
+
+    .search-box input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      outline: none;
+      color: #fff;
+      font-size: 0.95rem;
+    }
+
+    .search-box input::placeholder { color: rgba(255,255,255,0.8); }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)),
+        url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero-inner {
+      max-width: 760px;
+      background: rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 18px;
+      padding: 30px 24px;
+      color: #fff;
+    }
+
+    .hero-inner h1 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      margin-bottom: 10px;
+    }
+
+    .hero-inner p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.05rem;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #fff3cd;
+      color: #9a6a00;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.9rem, 2.5vw, 2.8rem);
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 26px;
+    }
+
+    .album-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .album-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 38px rgba(15, 23, 42, 0.15);
+    }
+
+    .album-image {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .album-content {
+      padding: 20px 18px 18px;
+    }
+
+    .album-content h3 {
+      font-size: 1.45rem;
+      margin-bottom: 6px;
+    }
+
+    .artist {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+
+    .price {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .cta {
+      background: var(--primary);
+      color: #fff;
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .feature {
+      background: linear-gradient(135deg, #fff, #f8f9fa);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+    }
+
+    .feature-text {
+      padding: 48px 40px;
+    }
+
+    .feature-text h3 {
+      font-size: clamp(1.8rem, 2vw, 2.9rem);
+      margin-bottom: 12px;
+    }
+
+    .feature-text p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .features-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(140px, 1fr));
+      gap: 12px 20px;
+      margin-top: 16px;
+    }
+
+    .features-list li {
+      font-weight: 600;
+    }
+
+    .feature-image {
+      min-height: 100%;
+      background: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+    }
+
+    .newsletter {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fffdf7;
+      border: 1px solid #f0e7cc;
+      border-radius: 18px;
+      padding: 34px 24px;
+      text-align: center;
+    }
+
+    .newsletter h3 {
+      font-size: clamp(1.9rem, 2vw, 2.5rem);
+      margin-bottom: 10px;
+    }
+
+    .newsletter p {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-form input {
+      width: min(100%, 420px);
+      padding: 14px 16px;
+      border: 1px solid #d2d6dc;
+      border-radius: 10px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .newsletter-form button {
+      border: none;
+      background: var(--gold);
+      color: #111;
+      border-radius: 10px;
+      padding: 14px 22px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #111827;
+      color: #fff;
+      padding: 36px 20px 46px;
+      margin-top: 42px;
+    }
+
+    .footer-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand h4 {
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 42px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links h5 {
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .footer-links a,
+    .footer-links p {
+      display: block;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 720px) {
+      .feature-grid { grid-template-columns: 1fr; }
+      .features-list { grid-template-columns: 1fr; }
+      .nav { justify-content: center; }
+      .menu { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main Menu">
+      <a href="Homepage - Copy.html" class="brand">Rhythm House</a>
+      <ul class="menu">
+        <li><a href="Homepage - Copy.html">Home</a></li>
+        <li><a href="Album page.html">Albums</a></li>
+        <li><a href="about us page.html">About</a></li>
+        <li><a href="contact us page.html">Contact</a></li>
+        <li><a href="live shows page - Copy.html">Live Shows</a></li>
+        <li><a href="Album listing page.html">Album Listing</a></li>
+      </ul>
+      <div class="search-box">
+        <input type="text" placeholder="Search albums" aria-label="Search albums" />
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>New Album Releases</h1>
+      <p>Discover your next favorite sound, from energetic pop tracks to soulful acoustic classics.</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <span class="tag">Featured</span>
+          <h2>Popular Albums</h2>
+        </div>
+        <p>Fresh drops and crowd favorites</p>
+      </div>
+
+      <div class="album-grid">
+        <article class="album-card">
+          <img class="album-image" src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=80" alt="Midnight Echo album cover" />
+          <div class="album-content">
+            <h3>Midnight Echo</h3>
+            <p class="artist">Ava Stone</p>
+            <div class="meta-row">
+              <span class="price">Rs. 1,999</span>
+              <a class="cta" href="#">Buy Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="album-card">
+          <img class="album-image" src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=80" alt="Sunset Drive album cover" />
+          <div class="album-content">
+            <h3>Sunset Drive</h3>
+            <p class="artist">The Horizon Band</p>
+            <div class="meta-row">
+              <span class="price">Rs. 2,299</span>
+              <a class="cta" href="#">Buy Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="album-card">
+          <img class="album-image" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80" alt="Velvet Nights album cover" />
+          <div class="album-content">
+            <h3>Velvet Nights</h3>
+            <p class="artist">Luna West</p>
+            <div class="meta-row">
+              <span class="price">Rs. 1,699</span>
+              <a class="cta" href="#">Buy Now</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="album-card">
+          <img class="album-image" src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=900&q=80" alt="City Lights album cover" />
+          <div class="album-content">
+            <h3>City Lights</h3>
+            <p class="artist">Nova Waves</p>
+            <div class="meta-row">
+              <span class="price">Rs. 2,499</span>
+              <a class="cta" href="#">Buy Now</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="feature">
+        <div class="feature-grid">
+          <div class="feature-text">
+            <span class="tag">Album Story</span>
+            <h3>Rhythm House Collection</h3>
+            <p>
+              A curated mix of cinematic sounds, elegant melodies, and modern beats designed for listeners who love every layer of a song.
+            </p>
+            <ul class="features-list">
+              <li>12 Original Tracks</li>
+              <li>Vinyl + CD Ready</li>
+              <li>High-Quality Audio</li>
+              <li>Best Seller</li>
+            </ul>
+          </div>
+          <div class="feature-image" aria-label="Album feature image"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="newsletter">
+        <h3>Stay Updated</h3>
+        <p>Subscribe for release alerts, exclusive offers, and the latest music updates from Rhythm House.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+          <input type="email" placeholder="Enter your email address" aria-label="Email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <h4>Rhythm House</h4>
+        <p>© 2026 Rhythm House. All rights reserved.</p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h5>Explore</h5>
+          <a href="Homepage - Copy.html">Home</a>
+          <a href="Album page.html">Albums</a>
+          <a href="about us page.html">About</a>
+        </div>
+        <div>
+          <h5>Support</h5>
+          <a href="contact us page.html">Contact</a>
+          <a href="live shows page - Copy.html">Live Shows</a>
+          <a href="Album listing page.html">Album Listing</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

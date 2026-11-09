@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Atif Aslam - Rhythm House</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="music-container">
+        <!-- 🏠 HOME LINK NAVIGATION BAR -->
+        <div class="nav-bar">
+            <a href="Homepage.html" class="home-link">
+                <span class="home-icon">🏠</span> Home
+            </a>
+        </div>
+    <!-- Main About Section Container -->
+    <main class="about-container">
+        <div class="about-wrapper">
+            
+            <!-- LEFT PANEL: ARTIST VISUAL MEDIA -->
+            <div class="about-media-box">
+                <img src="igik.jpg" alt="Atif Aslam Live Performance">
+                <div class="artist-status">👑 King of Vocal</div>
+            </div>
+
+            <!-- RIGHT PANEL: BIOGRAPHY & DETAILS SHEET -->
+            <div class="about-info-panel">
+                <span class="panel-tag">Artist Profile</span>
+                <h1 class="artist-name">Atif Aslam</h1>
+                <p class="artist-title-sub">The Voice of South Asia</p>
+
+                <!-- Description Block -->
+                <div class="bio-text">
+                    <p>Atif Aslam is a globally acclaimed Pakistani playback singer, songwriter, and actor. Known for his powerful vocal belting technique and soulful melodies, he has recorded numerous chart-topping songs in Pakistan, India, and across the world.</p>
+                </div>
+
+                <!-- Career Technical Spec Table Sheet -->
+                <div class="career-spec-table">
+                    <div class="spec-row">
+                        <span class="spec-label">Born:</span>
+                        <span class="spec-value">March 12, 1983 (Wazirabad, Pakistan)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Genres:</span>
+                        <span class="spec-value highlight-blue">Pop • Rock • Sufi • Filmi</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Active Years:</span>
+                        <span class="spec-value">2003 - Present</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Honors:</span>
+                        <span class="spec-value text-gold">Tamgha-e-Imtiaz (Government of Pakistan)</span>
+                    </div>
+                </div>
+
+                <!-- Action Button Footers -->
+                <div class="action-footer-row">
+                    <button class="listen-now-btn">🎵 Listen to Hits</button>
+                    <button class="book-show-btn">🎟️ Book Live Show Tickets</button>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+<style>
+    /* Universal Settings & Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a; /* Premium Dark Theme Background */
+    color: #f8fafc;
+    padding: 60px 20px;
+}
+
+/* Main Core Layout Wrapper */
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-wrapper {
+    display: flex;
+    background-color: #1e293b; /* Deep slate background panel card */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap; /* Splits and stacks layout automatically for mobile phones */
+}
+
+/* Left Column: Visual Media Box Frame */
+.about-media-box {
+    flex: 1;
+    min-width: 320px;
+    max-width: 440px;
+    height: 450px;
+    background-color: #0f172a;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #475569;
+}
+
+.about-media-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps performer picture aspect ratio correct */
+}
+
+/* Artist Status Badge Overlay */
+.artist-status {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #f5b016; /* Gold color matching your previous card theme */
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Right Column: Full Details Panel Dashboard */
+.about-info-panel {
+    flex: 1.3;
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-tag {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #3b82f6; /* Accent Blue tag */
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.artist-name {
+    font-size: 42px;
+    color: #ffffff;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.artist-title-sub {
+    font-size: 18px;
+    color: #94a3b8;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+/* Biography Text Block Paragraph styles */
+.bio-text p {
+    font-size: 15px;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Table Specifications Rows Sheet */
+.career-spec-table {
+    border-top: 1px solid #334155;
+    margin-bottom: 35px;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #334155;
+    font-size: 14px;
+}
+
+.spec-label {
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.spec-value {
+    color: #ffffff;
+    font-weight: 600;
+    text-align: right;
+}
+
+.spec-value.highlight-blue {
+    color: #3b82f6;
+}
+
+.spec-value.text-gold {
+    color: #f5b016; /* Highlights top honor award statement values */
+}
+
+/* CTA Footer Row Actions Buttons (Equal Row Alignments) */
+.action-footer-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: auto; /* Forces buttons to sit firmly parallel at bottom line */
+}
+
+.listen-now-btn, .book-show-btn {
+    flex: 1;
+    min-width: 160px;
+    border: none;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+/* Blue Primary Button Style */
+.listen-now-btn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.listen-now-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Dark Accent Secondary Button Style */
+.book-show-btn {
+    background-color: #0f172a;
+    color: white;
+    border: 1px solid #334155;
+}
+
+.book-show-btn:hover {
+    background-color: #1e293b;
+    border-color: #475569;
+}
+
+/* Small Device Mobile Optimization Layout Breakpoints */
+@media (max-width: 768px) {
+    .about-wrapper {
+        padding: 20px;
+        gap: 25px;
+    }
+    .about-media-box {
+        max-width: 100%;
+        height: 320px;
+    }
+    .artist-name {
+        font-size: 34px;
+    }
+}
+</style>
+</body>
+</html>
+
+</body>
+</html>
